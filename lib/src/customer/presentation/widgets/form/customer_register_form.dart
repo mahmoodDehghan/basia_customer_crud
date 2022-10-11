@@ -15,7 +15,8 @@ class CustomerRegisterForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final CustomerFormController pageController = Get.find();
+    final CustomerFormController pageController =
+        Get.put(CustomerFormController());
     return Form(
       key: _formKey,
       child: Column(

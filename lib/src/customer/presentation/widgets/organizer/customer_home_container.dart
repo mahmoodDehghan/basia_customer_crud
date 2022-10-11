@@ -1,13 +1,11 @@
 import 'package:basia_customer_crud/src/customer/presentation/widgets/form/customer_register_form.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
-class CustomerHomeContainer extends GetView<CustomerRegisterForm> {
+class CustomerHomeContainer extends StatelessWidget {
   const CustomerHomeContainer({super.key});
 
   @override
   Widget build(BuildContext context) {
-    Get.put(controller);
     return CustomScrollView(
       slivers: [
         SliverList(
