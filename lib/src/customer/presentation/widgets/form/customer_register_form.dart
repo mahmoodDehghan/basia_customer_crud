@@ -14,6 +14,7 @@ class CustomerRegisterForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const verticalSpace = 35.0;
     final CustomerFormController pageController =
         Get.put(CustomerFormController());
     return Form(
@@ -25,7 +26,9 @@ class CustomerRegisterForm extends StatelessWidget {
             style: pageController.errorMessageStyle.value,
             textAlign: TextAlign.center,
           ),
-          const VerticalBlankSpace(),
+          const VerticalBlankSpace(
+            height: verticalSpace,
+          ),
           CustomerFormTextInput(
             controller: pageController.firstNameController,
             validator: pageController.fillValidation,
@@ -33,7 +36,9 @@ class CustomerRegisterForm extends StatelessWidget {
             action: TextInputAction.next,
             inputType: TextInputType.text,
           ),
-          const VerticalBlankSpace(),
+          const VerticalBlankSpace(
+            height: verticalSpace,
+          ),
           CustomerFormTextInput(
             controller: pageController.lastNameController,
             validator: pageController.fillValidation,
@@ -41,7 +46,9 @@ class CustomerRegisterForm extends StatelessWidget {
             action: TextInputAction.next,
             inputType: TextInputType.text,
           ),
-          const VerticalBlankSpace(),
+          const VerticalBlankSpace(
+            height: verticalSpace,
+          ),
           CustomerFormTextInput(
             controller: pageController.emailController,
             label: CustomerStrings.customerEmail.tr,
@@ -49,7 +56,9 @@ class CustomerRegisterForm extends StatelessWidget {
             action: TextInputAction.next,
             inputType: TextInputType.number,
           ),
-          const VerticalBlankSpace(),
+          const VerticalBlankSpace(
+            height: verticalSpace,
+          ),
           CustomerFormTextInput(
             controller: pageController.phoneNumberController,
             label: CustomerStrings.customerPhoneNumber.tr,
@@ -57,7 +66,9 @@ class CustomerRegisterForm extends StatelessWidget {
             action: TextInputAction.next,
             inputType: TextInputType.number,
           ),
-          const VerticalBlankSpace(),
+          const VerticalBlankSpace(
+            height: verticalSpace,
+          ),
           CustomerFormTextInput(
             controller: pageController.bankAccountNumberController,
             label: CustomerStrings.customerBankAccountNumber.tr,
@@ -65,13 +76,17 @@ class CustomerRegisterForm extends StatelessWidget {
             action: TextInputAction.next,
             inputType: TextInputType.number,
           ),
-          const VerticalBlankSpace(),
+          const VerticalBlankSpace(
+            height: verticalSpace,
+          ),
           CustomerBirthDatePicker(
             choosenDate: pageController.birth.value,
             pickDate: pageController.onDatePicked,
             initialDate: pageController.birthDate.value,
           ),
-          const VerticalBlankSpace(),
+          const VerticalBlankSpace(
+            height: 2 * verticalSpace,
+          ),
           CustomerSubmitPart(
             submitLabel: CustomerStrings.addCustomer,
             onClear: pageController.clearEntries,
