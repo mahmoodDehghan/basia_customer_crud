@@ -1,6 +1,6 @@
 name: basia_customer_crud
 description: A new Flutter package project.
-version: 0.0.1
+version: 0.0.2
 publish_to: "none"
 homepage: "https://github.com/mahmoodDehghan/basia_customer_crud"
 
@@ -27,7 +27,8 @@ dependencies:
     git: 
       url: https://github.com/mahmoodDehghan/basia_crud_test_shared_libraries
       ref: main
-      path: ''  
+      path: ''
+      version: ^0.0.2  
 
 dev_dependencies:
   integration_test:
