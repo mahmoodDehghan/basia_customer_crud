@@ -10,6 +10,7 @@ class CustomersHomePage extends GetView<CustomersHomeController> {
   const CustomersHomePage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    Get.put(CustomersHomeController());
     return Scaffold(
       appBar: AppBar(
         title: Center(
