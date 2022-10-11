@@ -11,4 +11,8 @@ class CustomerStrings {
   static const String customerEmail = 'customerEmail';
   static const String emptyError = 'emptyError';
   static const String customerPickBDate = 'customerPickBDate';
+  static const String addCustomer = 'addCustomer';
+  static const String clearEntries = 'clearEntries';
+  static const String initMsg = 'initMsg';
+  static const String wrongInputFields = 'wrongInputFields';
 }

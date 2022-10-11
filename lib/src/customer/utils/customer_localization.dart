@@ -17,6 +17,10 @@ class CustomerLocalization extends Translations {
           CustomerStrings.customerBirthYear: "Year",
           CustomerStrings.emptyError: "Field is required!",
           CustomerStrings.customerPickBDate: "Pick Date",
+          CustomerStrings.addCustomer: "Add New Customer",
+          CustomerStrings.clearEntries: "Clear Form",
+          CustomerStrings.initMsg: "Please fill the form completely!",
+          CustomerStrings.wrongInputFields: "Please fill the form carefully!",
         },
         'fa_IR': {
           CustomerStrings.customerHomeTitle: "پنل تست مشتری",
@@ -31,6 +35,10 @@ class CustomerLocalization extends Translations {
           CustomerStrings.customerBirthYear: "سال",
           CustomerStrings.emptyError: "فیلد اجباری!",
           CustomerStrings.customerPickBDate: "انتخاب تاریخ",
+          CustomerStrings.addCustomer: "افزودن مشتری",
+          CustomerStrings.clearEntries: "بازآفرینی فرم",
+          CustomerStrings.initMsg: "لطفا فرم را کامل پر کنید",
+          CustomerStrings.wrongInputFields: "لطفا فرم را با دقت پر کنید!",
         }
       };
 }
