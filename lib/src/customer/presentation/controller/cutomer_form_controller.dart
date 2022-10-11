@@ -33,7 +33,6 @@ class CustomerFormController extends GetxController {
 
   @override
   void onReady() {
-    errorMessage.value = CustomerStrings.initMsg.tr;
     super.onReady();
   }
 

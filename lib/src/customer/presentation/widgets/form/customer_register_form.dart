@@ -93,6 +93,9 @@ class CustomerRegisterForm extends StatelessWidget {
             onSubmit: () => pageController.onSubmitForm(key: _formKey),
             clearLabel: CustomerStrings.clearEntries,
           ),
+          const VerticalBlankSpace(
+            height: 2 * verticalSpace,
+          ),
         ],
       ),
     );
