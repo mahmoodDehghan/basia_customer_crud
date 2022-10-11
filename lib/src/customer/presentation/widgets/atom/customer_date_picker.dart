@@ -3,6 +3,7 @@ import 'package:basia_customer_crud/src/customer/presentation/widgets/atom/cutom
 import 'package:flutter/material.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:get/get.dart';
+import 'package:shared_libs/shared_libs.dart';
 
 class CustomerBirthDatePicker extends StatelessWidget {
   const CustomerBirthDatePicker({
@@ -19,12 +20,17 @@ class CustomerBirthDatePicker extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         Expanded(
             flex: 1,
             child: CustomerFormLabel(
               label: CustomerStrings.customerBirthDate.tr,
             )),
+        const HorizontalBlankSpace(
+          width: 50,
+        ),
         Expanded(
             flex: 3,
             child: Row(
@@ -38,7 +44,7 @@ class CustomerBirthDatePicker extends StatelessWidget {
                             minTime: DateTime(1900, 01, 01),
                             maxTime: DateTime(2010, 01, 01),
                             onConfirm: pickDate,
-                            currentTime: initialDate,
+                            // currentTime: initialDate,
                           );
                         },
                         child: Text(CustomerStrings.customerPickBDate.tr))),
