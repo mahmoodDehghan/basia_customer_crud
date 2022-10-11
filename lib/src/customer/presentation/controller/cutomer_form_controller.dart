@@ -18,7 +18,7 @@ class CustomerFormController extends GetxController {
   final TextEditingController bankAccountNumberController;
   final Rx<DateTime> birthDate = DateTime.utc(2010).obs;
   final RxBool dateChoosen = false.obs;
-  final RxString errorMessage = CustomerStrings.initMsg.obs;
+  final RxString errorMessage = CustomerStrings.initMsg.tr.obs;
   final Rx<TextStyle> errorMessageStyle =
       Theme.of(Get.context!).textTheme.titleSmall!.obs;
   // final RxInt year = 0.obs;

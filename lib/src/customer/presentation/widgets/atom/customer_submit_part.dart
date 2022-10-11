@@ -19,11 +19,12 @@ class CustomerSubmitPart extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.center,
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
-        Expanded(
+        Flexible(
           flex: 1,
           child: ElevatedButton(
+            key: const ValueKey('customerRegister'),
             onPressed: onSubmit,
             child: Text(
               submitLabel,
@@ -34,7 +35,7 @@ class CustomerSubmitPart extends StatelessWidget {
         const HorizontalBlankSpace(
           width: 30,
         ),
-        Expanded(
+        Flexible(
           flex: 1,
           child: ElevatedButton(
             style: ElevatedButton.styleFrom(
