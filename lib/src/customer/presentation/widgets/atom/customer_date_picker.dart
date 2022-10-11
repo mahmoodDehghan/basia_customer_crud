@@ -41,7 +41,7 @@ class CustomerBirthDatePicker extends StatelessWidget {
                             minTime: DateTime(1900, 01, 01),
                             maxTime: DateTime(2010, 01, 01),
                             onChanged: pickDate,
-                            // currentTime: initialDate,
+                            currentTime: initialDate,
                           );
                         },
                         child: Text(CustomerStrings.customerPickBDate.tr))),
