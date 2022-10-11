@@ -28,9 +28,6 @@ class CustomerBirthDatePicker extends StatelessWidget {
             child: CustomerFormLabel(
               label: CustomerStrings.customerBirthDate.tr,
             )),
-        const HorizontalBlankSpace(
-          width: 50,
-        ),
         Expanded(
             flex: 3,
             child: Row(
@@ -43,11 +40,14 @@ class CustomerBirthDatePicker extends StatelessWidget {
                             context,
                             minTime: DateTime(1900, 01, 01),
                             maxTime: DateTime(2010, 01, 01),
-                            onConfirm: pickDate,
+                            onChanged: pickDate,
                             // currentTime: initialDate,
                           );
                         },
                         child: Text(CustomerStrings.customerPickBDate.tr))),
+                const HorizontalBlankSpace(
+                  width: 50,
+                ),
                 Expanded(
                     flex: 1,
                     child: TextFormField(
