@@ -26,9 +26,13 @@ class CustomerSubmitPart extends StatelessWidget {
           child: ElevatedButton(
             key: const ValueKey('customerRegister'),
             onPressed: onSubmit,
+            style: ElevatedButton.styleFrom(
+              textStyle: Theme.of(context).textTheme.labelMedium!.copyWith(
+                    color: Colors.white,
+                  ),
+            ),
             child: Text(
               submitLabel,
-              style: Theme.of(context).textTheme.labelMedium,
             ),
           ),
         ),
@@ -39,12 +43,14 @@ class CustomerSubmitPart extends StatelessWidget {
           flex: 1,
           child: ElevatedButton(
             style: ElevatedButton.styleFrom(
-              foregroundColor: Colors.redAccent,
+              textStyle: Theme.of(context)
+                  .textTheme
+                  .labelMedium!
+                  .copyWith(color: Colors.redAccent),
             ),
             onPressed: onClear,
             child: Text(
               clearLabel,
-              style: Theme.of(context).textTheme.labelMedium,
             ),
           ),
         ),
