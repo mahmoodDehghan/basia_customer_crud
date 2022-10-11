@@ -18,13 +18,19 @@ class CustomerFormController extends GetxController {
   final TextEditingController bankAccountNumberController;
   final Rx<DateTime> birthDate = DateTime.utc(2010).obs;
   final RxBool dateChoosen = false.obs;
-  final RxString errorMessage = (CustomerStrings.initMsg.tr).obs;
+  late final RxString errorMessage;
   final Rx<TextStyle> errorMessageStyle =
       Theme.of(Get.context!).textTheme.titleSmall!.obs;
   // final RxInt year = 0.obs;
   // final RxInt month = 0.obs;
   // final RxInt day = 0.obs;
   final RxString birth = '1/1/2010'.obs;
+
+  @override
+  void onInit() {
+    errorMessage = (CustomerStrings.initMsg.tr).obs;
+    super.onInit();
+  }
 
   String? fillValidation(String? entry) {
     if (entry == null || entry.isEmpty) {
